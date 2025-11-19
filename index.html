@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>聖誕交換禮物系統</title>
+  <title>聖誕交換禮物</title>
+  <link rel="shortcut icon" href="img/favicon.ico">
   
   <!-- 1. 引入 Tailwind CSS (樣式庫) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -402,7 +403,7 @@
 
       if (!isAuthorized) return (
         <div className="max-w-sm mx-auto mt-10 animate-fade-in"><BackButton onClick={goBack} />
-          <div className="bg-white p-8 rounded-2xl shadow-lg text-center"><div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-gray-500"><Icons.Lock className="w-8 h-8" /></div><h3 className="text-xl font-bold mb-1">主持人專用</h3><p className="text-gray-500 text-sm mb-6">請輸入管理密碼 (預設: 8888)</p><form onSubmit={handleLogin}><input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="w-full px-4 py-2 text-center border border-gray-300 rounded-lg mb-4 focus:ring-2 focus:ring-gray-500 outline-none tracking-widest" placeholder="●●●●" /><button type="submit" className="w-full bg-black text-white py-2 rounded-lg font-bold">進入後台</button></form></div></div>
+          <div className="bg-white p-8 rounded-2xl shadow-lg text-center"><div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-gray-500"><Icons.Lock className="w-8 h-8" /></div><h3 className="text-xl font-bold mb-1">主持人專用</h3><p className="text-gray-500 text-sm mb-6">請輸入管理密碼</p><form onSubmit={handleLogin}><input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="w-full px-4 py-2 text-center border border-gray-300 rounded-lg mb-4 focus:ring-2 focus:ring-gray-500 outline-none tracking-widest" placeholder="●●●●" /><button type="submit" className="w-full bg-black text-white py-2 rounded-lg font-bold">進入後台</button></form></div></div>
       );
 
       return (
